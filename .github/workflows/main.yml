@@ -1,16 +1,10 @@
+
 name: Aether Browser Build Environment
-
 on:
-workflow_dispatch:
-
+  workflow_dispatch:
 jobs:
-check-environment:
-runs-on: ubuntu-latest
-steps:
-- name: Check Linux environment
-run: |
-echo "Aether Browser build environment started"
-uname -a
-df -h /
-free -h
-echo "Environment check completed"
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        run: echo "Aether build environment started"
